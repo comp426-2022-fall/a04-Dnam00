@@ -38,14 +38,14 @@ app.get("/app/roll/:sides/", (req, res) => {
 	const sides = parseInt(req.params.sides);
 	const dice = 2;
 	const rolls = 1;
-	res.send(roll(sides,2,1));
+	res.send(roll(sides,dice,rolls));
 });
 //  returns JSON whatever sides and number of dices is specified in parameter
 app.get("/app/roll/:sides/:dice/", (req, res) => {
 	const sides = parseInt(req.params.sides);
 	const dice = parseInt(req.params.dice);
 	const rolls = 1;
-	res.send(roll(sides,dice,1));
+	res.send(roll(sides,dice,rolls));
 });
 //  returns JSON whatever sides, number of dices, and number of rolls specified in parameter
 app.get("/app/roll/:sides/:dice/:rolls/", (req, res) => {
