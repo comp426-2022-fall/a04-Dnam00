@@ -1,0 +1,19 @@
+{
+  "name": "a04-dnam00",
+  "version": "1.0.0",
+  "description": "\"Creating a Stand up an AI",
+  "main": "server.js",
+  "scripts": {
+    "test": "\"node server.js --port=5555\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2022-fall/a04-Dnam00.git"
+  },
+  "author": "Dnam00",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-fall/a04-Dnam00/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-fall/a04-Dnam00#readme"
+}
