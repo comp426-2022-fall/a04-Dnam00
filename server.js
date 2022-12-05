@@ -7,7 +7,7 @@ import {roll} from "./lib/roll.js";
 
 
 const app = express();
-const args = require("minimist")(process.agrv.slice(2));
+const args = minimist(process.agrv.slice(2));
 const port = args.port || 5000;
 
 //http header
