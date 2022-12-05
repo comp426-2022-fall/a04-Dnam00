@@ -11,9 +11,14 @@
     "url": "git+https://github.com/comp426-2022-fall/a04-Dnam00.git"
   },
   "author": "Dnam00",
+  "type": "module",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/comp426-2022-fall/a04-Dnam00/issues"
   },
-  "homepage": "https://github.com/comp426-2022-fall/a04-Dnam00#readme"
+  "homepage": "https://github.com/comp426-2022-fall/a04-Dnam00#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "minimist": "^1.2.7"
+  }
 }
