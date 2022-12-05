@@ -28,30 +28,30 @@ app.get("/app/roll/", (req, res) => {
 
 // base case for 6, 2, 1 and taking the data body for sides, dice, and rolls
 app.post("/app/roll/", (req, res) => {
-	let sides = parseInt(req.body.sides) || 6;
-	let dice =  parseInt(req.body.dice) || 2;
-	let rolls = parseInt(req.body.rolls) || 1;
+	const sides = parseInt(req.body.sides) || 6;
+	const dice =  parseInt(req.body.dice) || 2;
+	const rolls = parseInt(req.body.rolls) || 1;
 	res.send(roll(sides, dice, rolls));
 });
 //  returns JSON whatever sides is specified in parameter
 app.get("/app/roll/:sides/", (req, res) => {
-	let sides = parseInt(req.params.sides);
-	let dice = 2;
-	let rolls = 1;
+	const sides = parseInt(req.params.sides);
+	const dice = 2;
+	const rolls = 1;
 	res.send(roll(sides,2,1));
 });
 //  returns JSON whatever sides and number of dices is specified in parameter
 app.get("/app/roll/:sides/:dice/", (req, res) => {
-	let sides = parseInt(req.params.sides);
-	let dice = parseInt(req.params.dice);
-	let rolls = 1;
+	const sides = parseInt(req.params.sides);
+	const dice = parseInt(req.params.dice);
+	const rolls = 1;
 	res.send(roll(sides,dice,1));
 });
 //  returns JSON whatever sides, number of dices, and number of rolls specified in parameter
 app.get("/app/roll/:sides/:dice/:rolls/", (req, res) => {
-	let sides = parseInt(req.params.sides);
-	let dice = parseInt(req.params.dice);
-	let rolls = parseInt(req.params.rolls);
+	const sides = parseInt(req.params.sides);
+	const dice = parseInt(req.params.dice);
+	const rolls = parseInt(req.params.rolls);
 	res.send(roll(sides,dice,rolls));
 });
 
