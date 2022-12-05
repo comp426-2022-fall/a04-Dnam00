@@ -1,14 +1,17 @@
 #!/usr/bin/env node
 
-
-import minimist from "minimist";
-import express from "express";
-import roll from "./lib/roll.js";
+import minimist from "minimist"
+import express from "express"
+import {roll} from "./lib/roll.js"
 
 
 const app = express();
-const args = minimist(process.agrv.slice(2));
-const port = args.port || 5000;
+const args = minimist(process.argv.slice(2),{
+	default: {
+		port: 5000
+	},
+});
+//const port = args.port || 5000;
 
 //http header
 app.use(express.urlencoded({extended:true}));
