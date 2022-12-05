@@ -6,14 +6,13 @@ import express from "express";
 import {roll} from "./lib/roll.js";
 
 
-
 const app = express();
-const args = minimist(process.agrv.slice(2));
+const args = require("minimist")(process.agrv.slice(2));
 const port = args.port || 5000;
 
 //http header
 app.use(express.urlencoded({extended:true}));
-//app.use(express.json());
+app.use(express.json());
 
 app.get("/app/", (req, res) => {
 	res.status(200);	
@@ -25,7 +24,7 @@ app.get("/app/roll/", (req, res) => {
 });
 
 // base case for 6, 2, 1 and taking the data body for sides, dice, and rolls
-app.get("/app/roll/", (req, res, next) => {
+app.post("/app/roll/", (req, res, next) => {
 	let sides = parseInt(req.body.sides) || 6;
 	let dice =  parseInt(req.body.dice) || 2;
 	let rolls = parseInt(req.body.rolls) || 1;

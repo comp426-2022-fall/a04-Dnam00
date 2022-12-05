@@ -4,15 +4,16 @@
   "description": "\"Creating a Stand up an AI",
   "main": "server.js",
   "scripts": {
-    "test": "\"node server.js --port=5555\""
+    "test": "node server.js --port=5555"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/comp426-2022-fall/a04-Dnam00.git"
   },
+  "keywords": ["api"],
   "author": "Dnam00",
   "type": "module",
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/comp426-2022-fall/a04-Dnam00/issues"
   },
